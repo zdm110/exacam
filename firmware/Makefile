@@ -14,7 +14,7 @@ include fx2/fx2.mk
 
 all: build
 
-build: fx2/fx2.lib exacam.iic
+build: fx2/fx2.lib exacam.hex exacam.iic
 
 fx2/fx2.lib:
 	$(MAKE) -C fx2 fx2.lib
