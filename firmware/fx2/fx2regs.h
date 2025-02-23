@@ -312,6 +312,14 @@ EXTERN __xdata _AT_(0xFC00) volatile BYTE EP8FIFOBUF[1024]  ;  // 512 byte EP8 b
 -----------------------------------------------------------------------------*/
 
 __sfr __at 0x80 IOA;
+        __sbit __at (0x80+0) IOA0;
+        __sbit __at (0x80+1) IOA1;
+        __sbit __at (0x80+2) IOA2;
+        __sbit __at (0x80+3) IOA3;
+        __sbit __at (0x80+3) IOA4;
+        __sbit __at (0x80+3) IOA5;
+        __sbit __at (0x80+3) IOA6;
+        __sbit __at (0x80+3) IOA7;
 __sfr __at 0x81 SP;
 __sfr __at 0x82 DPL;
 __sfr __at 0x83 DPH;
@@ -319,7 +327,7 @@ __sfr __at 0x84 DPL1;
 __sfr __at 0x85 DPH1;
 __sfr __at 0x86 DPS;
          /*  DPS  */
-         __sbit __at 0x86+0 SEL;
+         __sbit __at (0x86+0) SEL;
 __sfr __at 0x87 PCON;   /*  PCON  */
          //sbit IDLE   = 0x87+0;
          //sbit STOP   = 0x87+1;
@@ -328,14 +336,14 @@ __sfr __at 0x87 PCON;   /*  PCON  */
          //sbit SMOD0  = 0x87+7;
 __sfr __at 0x88 TCON;
          /*  TCON  */
-         __sbit __at 0x88+0 IT0;
-         __sbit __at 0x88+1 IE0;
-         __sbit __at 0x88+2 IT1;
-         __sbit __at 0x88+3 IE1;
-         __sbit __at 0x88+4 TR0;
-         __sbit __at 0x88+5 TF0;
-         __sbit __at 0x88+6 TR1;
-         __sbit __at 0x88+7 TF1;
+         __sbit __at (0x88+0) IT0;
+         __sbit __at (0x88+1) IE0;
+         __sbit __at (0x88+2) IT1;
+         __sbit __at (0x88+3) IE1;
+         __sbit __at (0x88+4) TR0;
+         __sbit __at (0x88+5) TF0;
+         __sbit __at (0x88+6) TR1;
+         __sbit __at (0x88+7) TF1;
 __sfr __at 0x89 TMOD;
          /*  TMOD  */
          //sbit M00    = 0x89+0;
@@ -371,14 +379,14 @@ __sfr __at 0x91 EXIF; // EXIF Bit Values differ from Reg320
 __sfr __at 0x92 MPAGE;
 __sfr __at 0x98 SCON0;
          /*  SCON0  */
-         __sbit __at 0x98+0 RI;
-         __sbit __at 0x98+1 TI;
-         __sbit __at 0x98+2 RB8;
-         __sbit __at 0x98+3 TB8;
-         __sbit __at 0x98+4 REN;
-         __sbit __at 0x98+5 SM2;
-         __sbit __at 0x98+6 SM1;
-         __sbit __at 0x98+7 SM0;
+         __sbit __at (0x98+0) RI;
+         __sbit __at (0x98+1) TI;
+         __sbit __at (0x98+2) RB8;
+         __sbit __at (0x98+3) TB8;
+         __sbit __at (0x98+4) REN;
+         __sbit __at (0x98+5) SM2;
+         __sbit __at (0x98+6) SM1;
+         __sbit __at (0x98+7) SM0;
 __sfr __at 0x99 SBUF0;
 
 __sfr __at 0x9A APTR1H;
@@ -396,14 +404,14 @@ __sfr __at 0xA2 INT4CLR;
 
 __sfr __at 0xA8 IE;
          /*  IE  */
-         __sbit __at 0xA8+0 EX0;
-         __sbit __at 0xA8+1 ET0;
-         __sbit __at 0xA8+2 EX1;
-         __sbit __at 0xA8+3 ET1;
-         __sbit __at 0xA8+4 ES0;
-         __sbit __at 0xA8+5 ET2;
-         __sbit __at 0xA8+6 ES1;
-         __sbit __at 0xA8+7 EA;
+         __sbit __at (0xA8+0) EX0;
+         __sbit __at (0xA8+1) ET0;
+         __sbit __at (0xA8+2) EX1;
+         __sbit __at (0xA8+3) ET1;
+         __sbit __at (0xA8+4) ES0;
+         __sbit __at (0xA8+5) ET2;
+         __sbit __at (0xA8+6) ES1;
+         __sbit __at (0xA8+7) EA;
 
 __sfr __at 0xAA EP2468STAT;
          /* EP2468STAT */
@@ -420,9 +428,9 @@ __sfr __at 0xAB EP24FIFOFLGS;
 __sfr __at 0xAC EP68FIFOFLGS;
 __sfr __at 0xAF AUTOPTRSETUP;
             /* AUTOPTRSETUP */
-            __sbit __at 0xAF+0 EXTACC;
-            __sbit __at 0xAF+1 APTR1FZ;
-            __sbit __at 0xAF+2 APTR2FZ;
+            __sbit __at (0xAF+0) EXTACC;
+            __sbit __at (0xAF+1) APTR1FZ;
+            __sbit __at (0xAF+2) APTR2FZ;
 
 __sfr __at 0xB0 IOD;
 __sfr __at 0xB1 IOE;
@@ -434,13 +442,13 @@ __sfr __at 0xB6 OEE;
 
 __sfr __at 0xB8 IP;
          /*  IP  */
-         __sbit __at 0xB8+0 PX0;
-         __sbit __at 0xB8+1 PT0;
-         __sbit __at 0xB8+2 PX1;
-         __sbit __at 0xB8+3 PT1;
-         __sbit __at 0xB8+4 PS0;
-         __sbit __at 0xB8+5 PT2;
-         __sbit __at 0xB8+6 PS1;
+         __sbit __at (0xB8+0) PX0;
+         __sbit __at (0xB8+1) PT0;
+         __sbit __at (0xB8+2) PX1;
+         __sbit __at (0xB8+3) PT1;
+         __sbit __at (0xB8+4) PS0;
+         __sbit __at (0xB8+5) PT2;
+         __sbit __at (0xB8+6) PS1;
 
 __sfr __at 0xBA EP01STAT;
 __sfr __at 0xBB GPIFTRIG;
@@ -451,61 +459,61 @@ __sfr __at 0xBF GPIFSGLDATLNOX;
 
 __sfr __at 0xC0 SCON1;
          /*  SCON1  */
-         __sbit __at 0xC0+0 RI1;
-         __sbit __at 0xC0+1 TI1;
-         __sbit __at 0xC0+2 RB81;
-         __sbit __at 0xC0+3 TB81;
-         __sbit __at 0xC0+4 REN1;
-         __sbit __at 0xC0+5 SM21;
-         __sbit __at 0xC0+6 SM11;
-         __sbit __at 0xC0+7 SM01;
+         __sbit __at (0xC0+0) RI1;
+         __sbit __at (0xC0+1) TI1;
+         __sbit __at (0xC0+2) RB81;
+         __sbit __at (0xC0+3) TB81;
+         __sbit __at (0xC0+4) REN1;
+         __sbit __at (0xC0+5) SM21;
+         __sbit __at (0xC0+6) SM11;
+         __sbit __at (0xC0+7) SM01;
 __sfr __at 0xC1 SBUF1;
 __sfr __at 0xC8 T2CON;
          /*  T2CON  */
-	 __sbit __at 0xC8+0 CP_RL2;
-	 __sbit __at 0xC8+1 C_T2;
-         __sbit __at 0xC8+2 TR2;
-         __sbit __at 0xC8+3 EXEN2;
-         __sbit __at 0xC8+4 TCLK;
-         __sbit __at 0xC8+5 RCLK;
-         __sbit __at 0xC8+6 EXF2;
-         __sbit __at 0xC8+7 TF2;
+	 __sbit __at (0xC8+0) CP_RL2;
+	 __sbit __at (0xC8+1) C_T2;
+         __sbit __at (0xC8+2) TR2;
+         __sbit __at (0xC8+3) EXEN2;
+         __sbit __at (0xC8+4) TCLK;
+         __sbit __at (0xC8+5) RCLK;
+         __sbit __at (0xC8+6) EXF2;
+         __sbit __at (0xC8+7) TF2;
 __sfr __at 0xCA RCAP2L;
 __sfr __at 0xCB RCAP2H;
 __sfr __at 0xCC TL2;
 __sfr __at 0xCD TH2;
 __sfr __at 0xD0 PSW;
          /*  PSW  */
-         __sbit __at 0xD0+0 P;
-         __sbit __at 0xD0+1 FL;
-         __sbit __at 0xD0+2 OV;
-         __sbit __at 0xD0+3 RS0;
-         __sbit __at 0xD0+4 RS1;
-         __sbit __at 0xD0+5 F0;
-         __sbit __at 0xD0+6 AC;
-         __sbit __at 0xD0+7 CY;
+         __sbit __at (0xD0+0) P;
+         __sbit __at (0xD0+1) FL;
+         __sbit __at (0xD0+2) OV;
+         __sbit __at (0xD0+3) RS0;
+         __sbit __at (0xD0+4) RS1;
+         __sbit __at (0xD0+5) F0;
+         __sbit __at (0xD0+6) AC;
+         __sbit __at (0xD0+7) CY;
 __sfr __at 0xD8 EICON; // Was WDCON in DS80C320 EICON; Bit Values differ from Reg320
          /*  EICON  */
-         __sbit __at 0xD8+3 INT6;
-         __sbit __at 0xD8+4 RESI;
-         __sbit __at 0xD8+5 ERESI;
-         __sbit __at 0xD8+7 SMOD1;
+         __sbit __at (0xD8+3) INT6;
+         __sbit __at (0xD8+4) RESI;
+         __sbit __at (0xD8+5) ERESI;
+         __sbit __at (0xD8+7) SMOD1;
 __sfr __at 0xE0 ACC;
 __sfr __at 0xE8 EIE; // EIE Bit Values differ from Reg320
                         /*  EIE  */
-         __sbit __at 0xE8+0 EIUSB;
-         __sbit __at 0xE8+1 EI2C;
-         __sbit __at 0xE8+2 EIEX4;
-         __sbit __at 0xE8+3 EIEX5;
-         __sbit __at 0xE8+4 EIEX6;
+         __sbit __at (0xE8+0) EIUSB;
+         __sbit __at (0xE8+1) EI2C;
+         __sbit __at (0xE8+2) EIEX4;
+         __sbit __at (0xE8+3) EIEX5;
+         __sbit __at (0xE8+4) EIEX6;
 __sfr __at 0xF0 B;
 __sfr __at 0xF8 EIP; // EIP Bit Values differ from Reg320
                         /*  EIP  */
-         __sbit __at 0xF8+0 PUSB;
-         __sbit __at 0xF8+1 PI2C;
-         __sbit __at 0xF8+2 EIPX4;
-         __sbit __at 0xF8+3 EIPX5;
-         __sbit __at 0xF8+4 EIPX6;
+         __sbit __at (0xF8+0) PUSB;
+         __sbit __at (0xF8+1) PI2C;
+         __sbit __at (0xF8+2) EIPX4;
+         __sbit __at (0xF8+3) EIPX5;
+         __sbit __at (0xF8+4) EIPX6;
 
 /*-----------------------------------------------------------------------------
    Bit Masks
@@ -530,6 +538,7 @@ __sfr __at 0xF8 EIP; // EIP Bit Values differ from Reg320
 #define bm8051RES    bmBIT0
 /* Port Alternate Configuration Registers */
 /* Port A (PORTACFG) */
+#define bmSLCS       bmBIT6
 #define bmFLAGD      bmBIT7
 #define bmINT1       bmBIT1
 #define bmINT0       bmBIT0
